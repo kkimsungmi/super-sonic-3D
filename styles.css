@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .album-container {
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    margin-left: 50px;
+    transform: translateY(-50%);
+    position: fixed;
+    perspective: 2000px;
+  }
+
+  .album-cover,
+  .album-mv {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.8s;
+  }
+
+  .album-cover {
+    transform-origin: 100% 0;
+    transform: translateY(-50%) rotateY(0deg);
+    z-index: 10;
+  }
+
+  .album-container:hover .album-cover {
+    transform: translateY(-50%) rotateY(140deg);
+  }
